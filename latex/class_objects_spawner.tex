@@ -1,0 +1,67 @@
+\doxysection{Objects\+Spawner Class Reference}
+\hypertarget{class_objects_spawner}{}\label{class_objects_spawner}\index{ObjectsSpawner@{ObjectsSpawner}}
+
+
+Handles the spawning of objects within the maze, ensuring they are placed on passage tiles and not overlapping.  
+
+
+Inheritance diagram for Objects\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_objects_spawner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_objects_spawner_af93bb07b81ec53ec8814402e91cf43e5}{Spawn\+Objects}} (int width, int height, \mbox{\hyperlink{class_maze_tile}{Maze\+Tile}}\mbox{[},\mbox{]} maze\+Tiles, Game\+Object prefab, int number\+Of\+Objects)
+\begin{DoxyCompactList}\small\item\em Spawns a specific number of objects at random passage tiles in the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_objects_spawner_a148ece973a417c4a46baec01ad4d4e3e}\label{class_objects_spawner_a148ece973a417c4a46baec01ad4d4e3e} 
+void {\bfseries Clear\+Occupied\+Tiles} ()
+\begin{DoxyCompactList}\small\item\em Clears the list of occupied tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_objects_spawner_a2cadd34f425ec8f954119af79f60ab42}\label{class_objects_spawner_a2cadd34f425ec8f954119af79f60ab42} 
+void {\bfseries Clear\+Spawned\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Destroys all spawned objects and clears the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_objects_spawner_af07030b65dd6ba3e73bbd5cb3f93ccab}\label{class_objects_spawner_af07030b65dd6ba3e73bbd5cb3f93ccab} 
+List$<$ Vector2\+Int $>$ {\bfseries occupied\+Tiles} = new List$<$Vector2\+Int$>$()
+\begin{DoxyCompactList}\small\item\em List to track occupied tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_objects_spawner_afac70458f75608a23e1970813342852f}\label{class_objects_spawner_afac70458f75608a23e1970813342852f} 
+List$<$ Game\+Object $>$ {\bfseries spawned\+Objects} = new List$<$Game\+Object$>$()
+\begin{DoxyCompactList}\small\item\em List to keep references to spawned objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the spawning of objects within the maze, ensuring they are placed on passage tiles and not overlapping. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_objects_spawner_af93bb07b81ec53ec8814402e91cf43e5}\index{ObjectsSpawner@{ObjectsSpawner}!SpawnObjects@{SpawnObjects}}
+\index{SpawnObjects@{SpawnObjects}!ObjectsSpawner@{ObjectsSpawner}}
+\doxysubsubsection{\texorpdfstring{SpawnObjects()}{SpawnObjects()}}
+{\footnotesize\ttfamily \label{class_objects_spawner_af93bb07b81ec53ec8814402e91cf43e5} 
+void Objects\+Spawner.\+Spawn\+Objects (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}}}]{maze\+Tiles}{\mbox{[},\mbox{]}, }\item[{Game\+Object}]{prefab}{, }\item[{int}]{number\+Of\+Objects}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawns a specific number of objects at random passage tiles in the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the maze.\\
+\hline
+{\em height} & The height of the maze.\\
+\hline
+{\em maze\+Tiles} & The 2D array of maze tiles.\\
+\hline
+{\em prefab} & The prefab to spawn.\\
+\hline
+{\em number\+Of\+Objects} & The number of objects to spawn.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Maze/Objects\+Spawner.\+cs\end{DoxyCompactItemize}

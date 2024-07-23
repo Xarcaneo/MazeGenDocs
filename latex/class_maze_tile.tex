@@ -1,0 +1,79 @@
+\doxysection{Maze\+Tile Class Reference}
+\hypertarget{class_maze_tile}{}\label{class_maze_tile}\index{MazeTile@{MazeTile}}
+
+
+Represents a tile in the maze, which can be a wall or a passage.  
+
+
+Inheritance diagram for Maze\+Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_maze_tile}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_tile_abe6a996403e9e418480060a1d952a4d4}\label{class_maze_tile_abe6a996403e9e418480060a1d952a4d4} 
+enum \mbox{\hyperlink{class_maze_tile_abe6a996403e9e418480060a1d952a4d4}{Tile\+State}} \{ {\bfseries Wall}
+, {\bfseries Passage}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing the state of the tile\+: Wall or Passage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_maze_tile_a57f452514dab5f018df029e5753c7377}{Change\+State}} (\mbox{\hyperlink{class_maze_tile_abe6a996403e9e418480060a1d952a4d4}{Tile\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em Changes the state of the tile to the specified new state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_tile_aa15f24c30440c4a34566c70d4969267d}\label{class_maze_tile_aa15f24c30440c4a34566c70d4969267d} 
+\mbox{\hyperlink{class_maze_tile_abe6a996403e9e418480060a1d952a4d4}{Tile\+State}} {\bfseries Current\+State}
+\begin{DoxyCompactList}\small\item\em The current state of the tile. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_tile_a5a13ea2f5d740ab33dd603c44c7f6769}\label{class_maze_tile_a5a13ea2f5d740ab33dd603c44c7f6769} 
+Vector2\+Int {\bfseries position}
+\begin{DoxyCompactList}\small\item\em The position of the tile in the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_tile_a9c978116883067d088149e26c92ac9e3}\label{class_maze_tile_a9c978116883067d088149e26c92ac9e3} 
+bool {\bfseries is\+Border\+Tile}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the tile is a border tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_tile_a4b4a8201b47281619e1e0d70c1745b03}\label{class_maze_tile_a4b4a8201b47281619e1e0d70c1745b03} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the tile as a wall and sets the border tile flag to false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_tile_afb72c54c80ae40fb393898bfe558f59f}\label{class_maze_tile_afb72c54c80ae40fb393898bfe558f59f} 
+Sprite {\bfseries wall\+Sprite}
+\begin{DoxyCompactList}\small\item\em Sprite to be used for wall tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_tile_a24cacc035601938fd1c77518a0312048}\label{class_maze_tile_a24cacc035601938fd1c77518a0312048} 
+Sprite {\bfseries passage\+Sprite}
+\begin{DoxyCompactList}\small\item\em Sprite to be used for passage tiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a tile in the maze, which can be a wall or a passage. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_tile_a57f452514dab5f018df029e5753c7377}\index{MazeTile@{MazeTile}!ChangeState@{ChangeState}}
+\index{ChangeState@{ChangeState}!MazeTile@{MazeTile}}
+\doxysubsubsection{\texorpdfstring{ChangeState()}{ChangeState()}}
+{\footnotesize\ttfamily \label{class_maze_tile_a57f452514dab5f018df029e5753c7377} 
+void Maze\+Tile.\+Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_maze_tile_abe6a996403e9e418480060a1d952a4d4}{Tile\+State}}}]{new\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the state of the tile to the specified new state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The new state to change the tile to.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Maze/Maze\+Tile.\+cs\end{DoxyCompactItemize}

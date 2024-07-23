@@ -1,0 +1,54 @@
+\doxysection{Maze\+Manager Class Reference}
+\hypertarget{class_maze_manager}{}\label{class_maze_manager}\index{MazeManager@{MazeManager}}
+
+
+Manages the instantiation and generation of mazes using different algorithms.  
+
+
+Inheritance diagram for Maze\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_maze_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_manager_ac6ce9ffce904e2f44f80d3bbf2f5771a}\label{class_maze_manager_ac6ce9ffce904e2f44f80d3bbf2f5771a} 
+void {\bfseries Back\+To\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Returns to the main menu by clearing the maze and resetting level variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_manager_adc060755fce28c049d9b1b9e84885857}\label{class_maze_manager_adc060755fce28c049d9b1b9e84885857} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_maze_manager}{Maze\+Manager} and subscribes to the New\+Level event. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_manager_a0ebd26f3fb16b5d409dc99befe0b173a}\label{class_maze_manager_a0ebd26f3fb16b5d409dc99befe0b173a} 
+void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from the New\+Level event when the \doxylink{class_maze_manager}{Maze\+Manager} is destroyed. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_manager_a5505e8201ac330374ba4d081d130ee8c}\label{class_maze_manager_a5505e8201ac330374ba4d081d130ee8c} 
+void {\bfseries Instantiate\+Maze\+Generator} ()
+\begin{DoxyCompactList}\small\item\em Instantiates the appropriate maze generator based on the selected algorithm in the settings. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_manager_ade141d29b65d8b2c32d6fd6bbc50889d}\label{class_maze_manager_ade141d29b65d8b2c32d6fd6bbc50889d} 
+void {\bfseries Generate\+New\+Maze} ()
+\begin{DoxyCompactList}\small\item\em Generates a new maze by clearing the current maze and generating a new one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_manager_a2c33b2f2e6a6d8784380260b355f3169}\label{class_maze_manager_a2c33b2f2e6a6d8784380260b355f3169} 
+Game\+Object {\bfseries prim\+Maze\+Generator\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the Prim\textquotesingle{}s Algorithm Maze Generator. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_manager_a4ce4d0bc1c82ed2598dc9aa1c69109c6}\label{class_maze_manager_a4ce4d0bc1c82ed2598dc9aa1c69109c6} 
+Game\+Object {\bfseries dfs\+Maze\+Generator\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the DFS Algorithm Maze Generator. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_manager_a0ecabfc15766d47921077f38979c0129}\label{class_maze_manager_a0ecabfc15766d47921077f38979c0129} 
+Game\+Object {\bfseries maze\+Generator\+Instance}
+\begin{DoxyCompactList}\small\item\em Instance of the currently active maze generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the instantiation and generation of mazes using different algorithms. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Managers/Maze\+Manager.\+cs\end{DoxyCompactItemize}

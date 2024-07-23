@@ -1,0 +1,124 @@
+\doxysection{Maze\+Generator Class Reference}
+\hypertarget{class_maze_generator}{}\label{class_maze_generator}\index{MazeGenerator@{MazeGenerator}}
+
+
+Abstract base class for generating a maze. Provides methods to generate a grid and maze, and to clear the maze.  
+
+
+Inheritance diagram for Maze\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_maze_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_maze_generator_ac912a918aba77ca562c143a79200340b}{Generate\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Generates the maze. To be overridden by derived classes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_maze_generator_a3fd37c03fcdcab7ec926685df035fcd8}{Clear\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Clears the maze by setting all tiles to wall state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_maze_generator_a639105a57c9620b0d0e5592f27f2adc5}{Is\+Within\+Bounds}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Checks if a position is within the maze bounds. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a2539f7e5a00caff3c8103bc53c0eb465}\label{class_maze_generator_a2539f7e5a00caff3c8103bc53c0eb465} 
+void {\bfseries Instantiate\+Game\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Instantiates the player and score objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_generator_a9477d29f35ce489643093faf94d6e897}\label{class_maze_generator_a9477d29f35ce489643093faf94d6e897} 
+int {\bfseries width} = 20
+\begin{DoxyCompactList}\small\item\em Width of the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a55bfbb7d0f8a024a811fbe9dfe9806a7}\label{class_maze_generator_a55bfbb7d0f8a024a811fbe9dfe9806a7} 
+int {\bfseries height} = 20
+\begin{DoxyCompactList}\small\item\em Height of the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a2472f9e056523e1d43d576060497e14a}\label{class_maze_generator_a2472f9e056523e1d43d576060497e14a} 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}}\mbox{[},\mbox{]} {\bfseries maze\+Tiles}
+\begin{DoxyCompactList}\small\item\em 2D array to hold references to all the maze tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_ac8e138919bf60f5ed68a9c5271b21be3}\label{class_maze_generator_ac8e138919bf60f5ed68a9c5271b21be3} 
+\mbox{\hyperlink{class_objects_spawner}{Objects\+Spawner}} {\bfseries m\+\_\+objects\+Spawner}
+\begin{DoxyCompactList}\small\item\em Spawner for various objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_generator_a10b655da2f8620e8fa580010857e9519}\label{class_maze_generator_a10b655da2f8620e8fa580010857e9519} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the maze generator and starts the maze generation process. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a3518f70e2f0746bfabb4f9ac20ee50a5}\label{class_maze_generator_a3518f70e2f0746bfabb4f9ac20ee50a5} 
+void {\bfseries Generate\+Grid} ()
+\begin{DoxyCompactList}\small\item\em Generates a grid of maze tiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_generator_ae593c562158f8868272cea8f7c73342e}\label{class_maze_generator_ae593c562158f8868272cea8f7c73342e} 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}} {\bfseries tile\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the maze tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a83b74c6bd6fa96c6728d8fb85a726f25}\label{class_maze_generator_a83b74c6bd6fa96c6728d8fb85a726f25} 
+Transform {\bfseries parent\+Transform}
+\begin{DoxyCompactList}\small\item\em Parent transform to hold all the maze tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_ad316cfe40bbbf85de817ae9bb5f77dc7}\label{class_maze_generator_ad316cfe40bbbf85de817ae9bb5f77dc7} 
+Game\+Object {\bfseries player\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the player. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_generator_a0cc5c433566c51777139feb76d2011b5}\label{class_maze_generator_a0cc5c433566c51777139feb76d2011b5} 
+Game\+Object {\bfseries score\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the score pickup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for generating a maze. Provides methods to generate a grid and maze, and to clear the maze. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_generator_a3fd37c03fcdcab7ec926685df035fcd8}\index{MazeGenerator@{MazeGenerator}!ClearMaze@{ClearMaze}}
+\index{ClearMaze@{ClearMaze}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{ClearMaze()}{ClearMaze()}}
+{\footnotesize\ttfamily \label{class_maze_generator_a3fd37c03fcdcab7ec926685df035fcd8} 
+virtual void Maze\+Generator.\+Clear\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Clears the maze by setting all tiles to wall state. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_prims_maze_generator_af4f2cd46d6186ebcd10f7786ca3324ef}{Prims\+Maze\+Generator}}.
+
+\Hypertarget{class_maze_generator_ac912a918aba77ca562c143a79200340b}\index{MazeGenerator@{MazeGenerator}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \label{class_maze_generator_ac912a918aba77ca562c143a79200340b} 
+virtual void Maze\+Generator.\+Generate\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Generates the maze. To be overridden by derived classes. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_d_f_s_maze_generator_a4af85fe2cfd219de628835261ac736dd}{DFSMaze\+Generator}}, and \mbox{\hyperlink{class_prims_maze_generator_a7f2d1ee6743ea2a95410f32808a57b3a}{Prims\+Maze\+Generator}}.
+
+\Hypertarget{class_maze_generator_a639105a57c9620b0d0e5592f27f2adc5}\index{MazeGenerator@{MazeGenerator}!IsWithinBounds@{IsWithinBounds}}
+\index{IsWithinBounds@{IsWithinBounds}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{IsWithinBounds()}{IsWithinBounds()}}
+{\footnotesize\ttfamily \label{class_maze_generator_a639105a57c9620b0d0e5592f27f2adc5} 
+bool Maze\+Generator.\+Is\+Within\+Bounds (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if a position is within the maze bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the position is within the bounds, false otherwise.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Maze/Maze\+Generator.\+cs\end{DoxyCompactItemize}

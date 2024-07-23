@@ -1,0 +1,171 @@
+\doxysection{Prims\+Maze\+Generator Class Reference}
+\hypertarget{class_prims_maze_generator}{}\label{class_prims_maze_generator}\index{PrimsMazeGenerator@{PrimsMazeGenerator}}
+
+
+Generates a maze using Prim\textquotesingle{}s algorithm.  
+
+
+Inheritance diagram for Prims\+Maze\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_prims_maze_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_prims_maze_generator_a7f2d1ee6743ea2a95410f32808a57b3a}{Generate\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Overrides the base class method to generate a maze using Prim\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_prims_maze_generator_af4f2cd46d6186ebcd10f7786ca3324ef}{Clear\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Clears the maze and resets the frontier lists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}} \mbox{\hyperlink{class_prims_maze_generator_a276d1e0552bc71fc799a15cd06b5247e}{Get\+Random\+Tile}} (List$<$ Vector2\+Int $>$ \mbox{\hyperlink{class_prims_maze_generator_a12837f08aa1481c5f08fcba15817f992}{frontier\+Tiles}})
+\begin{DoxyCompactList}\small\item\em Gets a random tile from the list of frontier tiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prims_maze_generator_a93272dd1f722ba4f41499867dde68f90}{Add\+Frontier\+Tiles}} (int x, int y, bool is\+Border\+Tile)
+\begin{DoxyCompactList}\small\item\em Adds frontier tiles around a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prims_maze_generator_a17a7219de40cacbecf1e7d83f8ce6be1}{Add\+Frontier\+Tile}} (int x, int y, bool is\+Border\+Tile)
+\begin{DoxyCompactList}\small\item\em Adds a single tile to the frontier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_prims_maze_generator_a323337085f77e1057968f11ecc95e615}{Make\+Passage\+Between}} (Vector2\+Int pos1, Vector2\+Int pos2)
+\begin{DoxyCompactList}\small\item\em Creates a passage between two positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_prims_maze_generator_a12837f08aa1481c5f08fcba15817f992}\label{class_prims_maze_generator_a12837f08aa1481c5f08fcba15817f992} 
+List$<$ Vector2\+Int $>$ {\bfseries frontier\+Tiles} = new List$<$Vector2\+Int$>$()
+\begin{DoxyCompactList}\small\item\em List to hold the current frontier tiles. \end{DoxyCompactList}\item 
+\Hypertarget{class_prims_maze_generator_a08368e58629fd97d850fec108bb10ba4}\label{class_prims_maze_generator_a08368e58629fd97d850fec108bb10ba4} 
+List$<$ Vector2\+Int $>$ {\bfseries temp\+Frontier\+Tiles} = new List$<$Vector2\+Int$>$()
+\begin{DoxyCompactList}\small\item\em List to hold temporary frontier tiles for consideration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_maze_generator_a639105a57c9620b0d0e5592f27f2adc5}{Is\+Within\+Bounds}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Checks if a position is within the maze bounds. \end{DoxyCompactList}\item 
+void {\bfseries Instantiate\+Game\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Instantiates the player and score objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries width} = 20
+\begin{DoxyCompactList}\small\item\em Width of the maze. \end{DoxyCompactList}\item 
+int {\bfseries height} = 20
+\begin{DoxyCompactList}\small\item\em Height of the maze. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}}\mbox{[},\mbox{]} {\bfseries maze\+Tiles}
+\begin{DoxyCompactList}\small\item\em 2D array to hold references to all the maze tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_objects_spawner}{Objects\+Spawner}} {\bfseries m\+\_\+objects\+Spawner}
+\begin{DoxyCompactList}\small\item\em Spawner for various objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a maze using Prim\textquotesingle{}s algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_prims_maze_generator_a17a7219de40cacbecf1e7d83f8ce6be1}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!AddFrontierTile@{AddFrontierTile}}
+\index{AddFrontierTile@{AddFrontierTile}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{AddFrontierTile()}{AddFrontierTile()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_a17a7219de40cacbecf1e7d83f8ce6be1} 
+void Prims\+Maze\+Generator.\+Add\+Frontier\+Tile (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{bool}]{is\+Border\+Tile}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Adds a single tile to the frontier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the tile.\\
+\hline
+{\em y} & The y-\/coordinate of the tile.\\
+\hline
+{\em is\+Border\+Tile} & Whether the tile is a border tile.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prims_maze_generator_a93272dd1f722ba4f41499867dde68f90}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!AddFrontierTiles@{AddFrontierTiles}}
+\index{AddFrontierTiles@{AddFrontierTiles}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{AddFrontierTiles()}{AddFrontierTiles()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_a93272dd1f722ba4f41499867dde68f90} 
+void Prims\+Maze\+Generator.\+Add\+Frontier\+Tiles (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{bool}]{is\+Border\+Tile}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Adds frontier tiles around a specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the position.\\
+\hline
+{\em y} & The y-\/coordinate of the position.\\
+\hline
+{\em is\+Border\+Tile} & Whether the tile is a border tile.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_prims_maze_generator_af4f2cd46d6186ebcd10f7786ca3324ef}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!ClearMaze@{ClearMaze}}
+\index{ClearMaze@{ClearMaze}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{ClearMaze()}{ClearMaze()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_af4f2cd46d6186ebcd10f7786ca3324ef} 
+override void Prims\+Maze\+Generator.\+Clear\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Clears the maze and resets the frontier lists. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_maze_generator_a3fd37c03fcdcab7ec926685df035fcd8}{Maze\+Generator}}.
+
+\Hypertarget{class_prims_maze_generator_a7f2d1ee6743ea2a95410f32808a57b3a}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_a7f2d1ee6743ea2a95410f32808a57b3a} 
+override void Prims\+Maze\+Generator.\+Generate\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the base class method to generate a maze using Prim\textquotesingle{}s algorithm. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_maze_generator_ac912a918aba77ca562c143a79200340b}{Maze\+Generator}}.
+
+\Hypertarget{class_prims_maze_generator_a276d1e0552bc71fc799a15cd06b5247e}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!GetRandomTile@{GetRandomTile}}
+\index{GetRandomTile@{GetRandomTile}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GetRandomTile()}{GetRandomTile()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_a276d1e0552bc71fc799a15cd06b5247e} 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}} Prims\+Maze\+Generator.\+Get\+Random\+Tile (\begin{DoxyParamCaption}\item[{List$<$ Vector2\+Int $>$}]{frontier\+Tiles}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets a random tile from the list of frontier tiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frontier\+Tiles} & The list of frontier tiles.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random frontier tile, or null if the list is empty.
+\end{DoxyReturn}
+\Hypertarget{class_prims_maze_generator_a323337085f77e1057968f11ecc95e615}\index{PrimsMazeGenerator@{PrimsMazeGenerator}!MakePassageBetween@{MakePassageBetween}}
+\index{MakePassageBetween@{MakePassageBetween}!PrimsMazeGenerator@{PrimsMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{MakePassageBetween()}{MakePassageBetween()}}
+{\footnotesize\ttfamily \label{class_prims_maze_generator_a323337085f77e1057968f11ecc95e615} 
+void Prims\+Maze\+Generator.\+Make\+Passage\+Between (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{pos1}{, }\item[{Vector2\+Int}]{pos2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Creates a passage between two positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & The first position.\\
+\hline
+{\em pos2} & The second position.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Maze/\+Maze alghoritsm/Prims\+Maze\+Generator.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\doxysection{Maze\+Settings Class Reference}
+\hypertarget{class_maze_settings}{}\label{class_maze_settings}\index{MazeSettings@{MazeSettings}}
+
+
+Manages the UI settings for configuring the maze dimensions.  
+
+
+Inheritance diagram for Maze\+Settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_maze_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_settings_a2d55cfe2f1f6f62f97bfb928525b8861}\label{class_maze_settings_a2d55cfe2f1f6f62f97bfb928525b8861} 
+void {\bfseries Play\+Game} ()
+\begin{DoxyCompactList}\small\item\em Loads the gameplay scene when the play button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_settings_a5cfd9cbca8e6316fbd71b964a4f90510}\label{class_maze_settings_a5cfd9cbca8e6316fbd71b964a4f90510} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the settings UI and sets up listeners for the sliders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_settings_a629310f7a33300715d0dd0ef3c9e86ce}{On\+Width\+Slider\+Value\+Changed}} (float value)
+\begin{DoxyCompactList}\small\item\em Handles changes in the width slider value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_settings_a6679872533b2a7fc94c3b4231056d6ee}{On\+Height\+Slider\+Value\+Changed}} (float value)
+\begin{DoxyCompactList}\small\item\em Handles changes in the height slider value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_settings_ae81695f83a3479bc7c1827a629ba949b}{Update\+Width\+Text}} (float value)
+\begin{DoxyCompactList}\small\item\em Updates the text displaying the current width value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_settings_ad63251bb217331f9e0680c8f2b4c57ee}{Update\+Height\+Text}} (float value)
+\begin{DoxyCompactList}\small\item\em Updates the text displaying the current height value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_settings_a674b54cf1454bfc3ef01d53c27f83079}\label{class_maze_settings_a674b54cf1454bfc3ef01d53c27f83079} 
+Slider {\bfseries width\+Slider}
+\begin{DoxyCompactList}\small\item\em Slider for setting the maze width. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_settings_a8c025fdb7be36a5f636f9993b4498358}\label{class_maze_settings_a8c025fdb7be36a5f636f9993b4498358} 
+Text\+Mesh\+Pro\+UGUI {\bfseries width\+Value\+Text}
+\begin{DoxyCompactList}\small\item\em Text to display the current maze width value. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_settings_a75dc2fe4851d7fc7041a14016d7dc45a}\label{class_maze_settings_a75dc2fe4851d7fc7041a14016d7dc45a} 
+Slider {\bfseries height\+Slider}
+\begin{DoxyCompactList}\small\item\em Slider for setting the maze height. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_settings_a38ff41cbc268b0435ea04986ebc4e155}\label{class_maze_settings_a38ff41cbc268b0435ea04986ebc4e155} 
+Text\+Mesh\+Pro\+UGUI {\bfseries height\+Value\+Text}
+\begin{DoxyCompactList}\small\item\em Text to display the current maze height value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the UI settings for configuring the maze dimensions. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_settings_a6679872533b2a7fc94c3b4231056d6ee}\index{MazeSettings@{MazeSettings}!OnHeightSliderValueChanged@{OnHeightSliderValueChanged}}
+\index{OnHeightSliderValueChanged@{OnHeightSliderValueChanged}!MazeSettings@{MazeSettings}}
+\doxysubsubsection{\texorpdfstring{OnHeightSliderValueChanged()}{OnHeightSliderValueChanged()}}
+{\footnotesize\ttfamily \label{class_maze_settings_a6679872533b2a7fc94c3b4231056d6ee} 
+void Maze\+Settings.\+On\+Height\+Slider\+Value\+Changed (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Handles changes in the height slider value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new height value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_settings_a629310f7a33300715d0dd0ef3c9e86ce}\index{MazeSettings@{MazeSettings}!OnWidthSliderValueChanged@{OnWidthSliderValueChanged}}
+\index{OnWidthSliderValueChanged@{OnWidthSliderValueChanged}!MazeSettings@{MazeSettings}}
+\doxysubsubsection{\texorpdfstring{OnWidthSliderValueChanged()}{OnWidthSliderValueChanged()}}
+{\footnotesize\ttfamily \label{class_maze_settings_a629310f7a33300715d0dd0ef3c9e86ce} 
+void Maze\+Settings.\+On\+Width\+Slider\+Value\+Changed (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Handles changes in the width slider value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new width value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_settings_ad63251bb217331f9e0680c8f2b4c57ee}\index{MazeSettings@{MazeSettings}!UpdateHeightText@{UpdateHeightText}}
+\index{UpdateHeightText@{UpdateHeightText}!MazeSettings@{MazeSettings}}
+\doxysubsubsection{\texorpdfstring{UpdateHeightText()}{UpdateHeightText()}}
+{\footnotesize\ttfamily \label{class_maze_settings_ad63251bb217331f9e0680c8f2b4c57ee} 
+void Maze\+Settings.\+Update\+Height\+Text (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the text displaying the current height value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The current height value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_settings_ae81695f83a3479bc7c1827a629ba949b}\index{MazeSettings@{MazeSettings}!UpdateWidthText@{UpdateWidthText}}
+\index{UpdateWidthText@{UpdateWidthText}!MazeSettings@{MazeSettings}}
+\doxysubsubsection{\texorpdfstring{UpdateWidthText()}{UpdateWidthText()}}
+{\footnotesize\ttfamily \label{class_maze_settings_ae81695f83a3479bc7c1827a629ba949b} 
+void Maze\+Settings.\+Update\+Width\+Text (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the text displaying the current width value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The current width value.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Menus/Maze\+Settings.\+cs\end{DoxyCompactItemize}

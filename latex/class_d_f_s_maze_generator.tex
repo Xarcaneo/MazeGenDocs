@@ -1,0 +1,137 @@
+\doxysection{DFSMaze\+Generator Class Reference}
+\hypertarget{class_d_f_s_maze_generator}{}\label{class_d_f_s_maze_generator}\index{DFSMazeGenerator@{DFSMazeGenerator}}
+
+
+Generates a maze using the Depth-\/\+First Search (DFS) algorithm.  
+
+
+Inheritance diagram for DFSMaze\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_d_f_s_maze_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_d_f_s_maze_generator_a4af85fe2cfd219de628835261ac736dd}{Generate\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Overrides the base class method to generate a maze using DFS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_maze_generator_a3fd37c03fcdcab7ec926685df035fcd8}{Clear\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em Clears the maze by setting all tiles to wall state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_d_f_s_maze_generator_ac3d7a00b2651e133eb3427a42a658ac4}{Is\+On\+Bounds}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Checks if a position is on the maze bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_maze_generator_a639105a57c9620b0d0e5592f27f2adc5}{Is\+Within\+Bounds}} (Vector2\+Int position)
+\begin{DoxyCompactList}\small\item\em Checks if a position is within the maze bounds. \end{DoxyCompactList}\item 
+void {\bfseries Instantiate\+Game\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Instantiates the player and score objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Vector2\+Int $>$ \mbox{\hyperlink{class_d_f_s_maze_generator_a487f424965340d7b2dc07ba289d047c9}{Get\+Unvisited\+Neighbors}} (Vector2\+Int cell)
+\begin{DoxyCompactList}\small\item\em Gets the unvisited neighbors of a given cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_f_s_maze_generator_abcafccb189cf6d79bd1cf95bf749694f}{Add\+If\+Unvisited}} (List$<$ Vector2\+Int $>$ neighbors, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adds a cell to the list of neighbors if it is unvisited. \end{DoxyCompactList}\item 
+\Hypertarget{class_d_f_s_maze_generator_a9f04a7220bfa83809f7b4577b84b3e7e}\label{class_d_f_s_maze_generator_a9f04a7220bfa83809f7b4577b84b3e7e} 
+void {\bfseries Set\+Boundary\+Tiles\+To\+Wall} ()
+\begin{DoxyCompactList}\small\item\em Sets the boundary tiles of the maze to be walls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries width} = 20
+\begin{DoxyCompactList}\small\item\em Width of the maze. \end{DoxyCompactList}\item 
+int {\bfseries height} = 20
+\begin{DoxyCompactList}\small\item\em Height of the maze. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_tile}{Maze\+Tile}}\mbox{[},\mbox{]} {\bfseries maze\+Tiles}
+\begin{DoxyCompactList}\small\item\em 2D array to hold references to all the maze tiles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_objects_spawner}{Objects\+Spawner}} {\bfseries m\+\_\+objects\+Spawner}
+\begin{DoxyCompactList}\small\item\em Spawner for various objects within the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a maze using the Depth-\/\+First Search (DFS) algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_d_f_s_maze_generator_abcafccb189cf6d79bd1cf95bf749694f}\index{DFSMazeGenerator@{DFSMazeGenerator}!AddIfUnvisited@{AddIfUnvisited}}
+\index{AddIfUnvisited@{AddIfUnvisited}!DFSMazeGenerator@{DFSMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{AddIfUnvisited()}{AddIfUnvisited()}}
+{\footnotesize\ttfamily \label{class_d_f_s_maze_generator_abcafccb189cf6d79bd1cf95bf749694f} 
+void DFSMaze\+Generator.\+Add\+If\+Unvisited (\begin{DoxyParamCaption}\item[{List$<$ Vector2\+Int $>$}]{neighbors}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Adds a cell to the list of neighbors if it is unvisited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbors} & The list of neighbors to add to.\\
+\hline
+{\em x} & The x-\/coordinate of the cell to check.\\
+\hline
+{\em y} & The y-\/coordinate of the cell to check.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_d_f_s_maze_generator_a4af85fe2cfd219de628835261ac736dd}\index{DFSMazeGenerator@{DFSMazeGenerator}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!DFSMazeGenerator@{DFSMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \label{class_d_f_s_maze_generator_a4af85fe2cfd219de628835261ac736dd} 
+override void DFSMaze\+Generator.\+Generate\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the base class method to generate a maze using DFS. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_maze_generator_ac912a918aba77ca562c143a79200340b}{Maze\+Generator}}.
+
+\Hypertarget{class_d_f_s_maze_generator_a487f424965340d7b2dc07ba289d047c9}\index{DFSMazeGenerator@{DFSMazeGenerator}!GetUnvisitedNeighbors@{GetUnvisitedNeighbors}}
+\index{GetUnvisitedNeighbors@{GetUnvisitedNeighbors}!DFSMazeGenerator@{DFSMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GetUnvisitedNeighbors()}{GetUnvisitedNeighbors()}}
+{\footnotesize\ttfamily \label{class_d_f_s_maze_generator_a487f424965340d7b2dc07ba289d047c9} 
+List$<$ Vector2\+Int $>$ DFSMaze\+Generator.\+Get\+Unvisited\+Neighbors (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{cell}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gets the unvisited neighbors of a given cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell} & The cell to find unvisited neighbors for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of unvisited neighbor positions.
+\end{DoxyReturn}
+\Hypertarget{class_d_f_s_maze_generator_ac3d7a00b2651e133eb3427a42a658ac4}\index{DFSMazeGenerator@{DFSMazeGenerator}!IsOnBounds@{IsOnBounds}}
+\index{IsOnBounds@{IsOnBounds}!DFSMazeGenerator@{DFSMazeGenerator}}
+\doxysubsubsection{\texorpdfstring{IsOnBounds()}{IsOnBounds()}}
+{\footnotesize\ttfamily \label{class_d_f_s_maze_generator_ac3d7a00b2651e133eb3427a42a658ac4} 
+bool DFSMaze\+Generator.\+Is\+On\+Bounds (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if a position is on the maze bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the position is on the bounds, false otherwise.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Maze/\+Maze alghoritsm/DFSMaze\+Generator.\+cs\end{DoxyCompactItemize}

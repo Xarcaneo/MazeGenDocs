@@ -1,0 +1,96 @@
+\doxysection{Player\+Controller Class Reference}
+\hypertarget{class_player_controller}{}\label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+Controls the player\textquotesingle{}s movement and interactions with the game environment.  
+
+
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_controller_ae1117d9c4da3193181cddad2c814e467}\label{class_player_controller_ae1117d9c4da3193181cddad2c814e467} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the player controller. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}\label{class_player_controller_ae8bc83dffb99867a04be016473ed2c43} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Updates the player\textquotesingle{}s position and handles input for movement. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_player_controller_a7eb64b7be4c50c39801d92e9ed11a2d7}{Move\+To\+Position}} (Vector2 new\+Position)
+\begin{DoxyCompactList}\small\item\em Coroutine to move the player to the specified position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller_a28a275f0d2e70eb6c27f42f9aa91db15}{Can\+Move\+To}} (Vector2 target\+Pos, Vector2 move\+Direction)
+\begin{DoxyCompactList}\small\item\em Checks if the player can move to the specified position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_controller_ad48663758b90e2ae0d09b8f1a75f9db6}\label{class_player_controller_ad48663758b90e2ae0d09b8f1a75f9db6} 
+float {\bfseries grid\+Size} = 1f
+\begin{DoxyCompactList}\small\item\em Size of each grid cell. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_abb12e85ca1b12efdbc8684bff2e19c4c}\label{class_player_controller_abb12e85ca1b12efdbc8684bff2e19c4c} 
+float {\bfseries move\+Speed} = 5f
+\begin{DoxyCompactList}\small\item\em Speed at which the player moves between grid cells. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_ac71e7deff3c379c41be39e0584434015}\label{class_player_controller_ac71e7deff3c379c41be39e0584434015} 
+Layer\+Mask {\bfseries obstacle\+Layer}
+\begin{DoxyCompactList}\small\item\em Layer\+Mask to define which layers are considered obstacles. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_acf0bef7577b66f7dfa86e210c4d34e8e}\label{class_player_controller_acf0bef7577b66f7dfa86e210c4d34e8e} 
+Vector2 {\bfseries target\+Position}
+\begin{DoxyCompactList}\small\item\em The target position for the player\textquotesingle{}s movement. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_a544eb37f78bc66b2722ece025cefdaf9}\label{class_player_controller_a544eb37f78bc66b2722ece025cefdaf9} 
+bool {\bfseries is\+Moving} = false
+\begin{DoxyCompactList}\small\item\em Indicates if the player is currently moving. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_aa05f06dc0afc907a03454ca3fb4d5758}\label{class_player_controller_aa05f06dc0afc907a03454ca3fb4d5758} 
+\mbox{\hyperlink{class_player_animation_controller}{Player\+Animation\+Controller}} {\bfseries animation\+Controller}
+\begin{DoxyCompactList}\small\item\em Reference to the player\textquotesingle{}s animation controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the player\textquotesingle{}s movement and interactions with the game environment. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_controller_a28a275f0d2e70eb6c27f42f9aa91db15}\index{PlayerController@{PlayerController}!CanMoveTo@{CanMoveTo}}
+\index{CanMoveTo@{CanMoveTo}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{CanMoveTo()}{CanMoveTo()}}
+{\footnotesize\ttfamily \label{class_player_controller_a28a275f0d2e70eb6c27f42f9aa91db15} 
+bool Player\+Controller.\+Can\+Move\+To (\begin{DoxyParamCaption}\item[{Vector2}]{target\+Pos}{, }\item[{Vector2}]{move\+Direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks if the player can move to the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Pos} & The target position to move to.\\
+\hline
+{\em move\+Direction} & The direction of the movement.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the player can move to the position, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_player_controller_a7eb64b7be4c50c39801d92e9ed11a2d7}\index{PlayerController@{PlayerController}!MoveToPosition@{MoveToPosition}}
+\index{MoveToPosition@{MoveToPosition}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{MoveToPosition()}{MoveToPosition()}}
+{\footnotesize\ttfamily \label{class_player_controller_a7eb64b7be4c50c39801d92e9ed11a2d7} 
+IEnumerator Player\+Controller.\+Move\+To\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{new\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Coroutine to move the player to the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & The position to move to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An IEnumerator for the coroutine.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Game/\+Player/Player\+Controller.\+cs\end{DoxyCompactItemize}

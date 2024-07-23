@@ -1,0 +1,128 @@
+\doxysection{Timer\+Manager Class Reference}
+\hypertarget{class_timer_manager}{}\label{class_timer_manager}\index{TimerManager@{TimerManager}}
+
+
+Manages the countdown timer for the game and updates the timer UI.  
+
+
+Inheritance diagram for Timer\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timer_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timer_manager_a6bbee8f1347db785b2de8d386524ea57}{Initialize\+Timer}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Initializes the timer based on the maze dimensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_timer_manager_a4579d6515c4b80572190c17f656ebe37}\label{class_timer_manager_a4579d6515c4b80572190c17f656ebe37} 
+Action {\bfseries Time\+Almost\+Up}
+\begin{DoxyCompactList}\small\item\em Event triggered when the time is almost up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_timer_manager_a7ab6624bd840d27f5b7f0c6f00532bbf}\label{class_timer_manager_a7ab6624bd840d27f5b7f0c6f00532bbf} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_timer_manager}{Timer\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_aa9ede9b52ff59dbd0aa1cf10205096f8}\label{class_timer_manager_aa9ede9b52ff59dbd0aa1cf10205096f8} 
+void {\bfseries On\+Score\+Reseted} ()
+\begin{DoxyCompactList}\small\item\em Resets the timer when the score is reset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_timer_manager_ad539c1fecaaf4f57315ef91ca2c0703d}{Adjust\+Time\+Limit}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Adjusts the time limit based on the maze size. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_timer_manager_a65b440ed256722bab192b2cf3751d92c}{Countdown\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Coroutine for the countdown timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a148d89880ca0c87a8e3a0764e95a43b8}\label{class_timer_manager_a148d89880ca0c87a8e3a0764e95a43b8} 
+void {\bfseries Update\+Timer\+UI} ()
+\begin{DoxyCompactList}\small\item\em Updates the timer UI with the current remaining time. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a8b145882640080a42ddd809e11777aa3}\label{class_timer_manager_a8b145882640080a42ddd809e11777aa3} 
+void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Cleans up event subscriptions and stops all coroutines when the \doxylink{class_timer_manager}{Timer\+Manager} is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_timer_manager_aeeb2bd446c6fca4979280cac31655f87}\label{class_timer_manager_aeeb2bd446c6fca4979280cac31655f87} 
+Text\+Mesh\+Pro\+UGUI {\bfseries timer\+Text}
+\begin{DoxyCompactList}\small\item\em Text\+Mesh\+Pro text object for displaying the timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a98aff024534797f2f2d2a0072ebb2a99}\label{class_timer_manager_a98aff024534797f2f2d2a0072ebb2a99} 
+float {\bfseries time\+Per\+Cell} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Additional time added per cell for larger mazes. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_ae4110f87b120c4ba28c03702146e2614}\label{class_timer_manager_ae4110f87b120c4ba28c03702146e2614} 
+float {\bfseries warning\+Time} = 10f
+\begin{DoxyCompactList}\small\item\em Time in seconds when the timer text color should change. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a81e34084ab38056d18086ed0cb4effa0}\label{class_timer_manager_a81e34084ab38056d18086ed0cb4effa0} 
+Color {\bfseries warning\+Color} = Color.\+red
+\begin{DoxyCompactList}\small\item\em Color for the timer text when time is below the warning time. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a7817230b34c968aee635999da1d1113c}\label{class_timer_manager_a7817230b34c968aee635999da1d1113c} 
+\mbox{\hyperlink{class_maze_manager}{Maze\+Manager}} {\bfseries maze\+Manager}
+\begin{DoxyCompactList}\small\item\em Reference to the \doxylink{class_maze_manager}{Maze\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_a6dfa63c6e8c59dc65220ca4dcb276c17}\label{class_timer_manager_a6dfa63c6e8c59dc65220ca4dcb276c17} 
+float {\bfseries current\+Time}
+\begin{DoxyCompactList}\small\item\em Current remaining time. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_aaaa9fa68465790e3bc6822ff9f6e5825}\label{class_timer_manager_aaaa9fa68465790e3bc6822ff9f6e5825} 
+Color {\bfseries original\+Color}
+\begin{DoxyCompactList}\small\item\em Original color of the timer text. \end{DoxyCompactList}\item 
+\Hypertarget{class_timer_manager_ae5497afa8b0377940c9584c42005e661}\label{class_timer_manager_ae5497afa8b0377940c9584c42005e661} 
+bool {\bfseries warning\+Time\+On}
+\begin{DoxyCompactList}\small\item\em Flag to indicate if the warning time has been triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the countdown timer for the game and updates the timer UI. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_timer_manager_ad539c1fecaaf4f57315ef91ca2c0703d}\index{TimerManager@{TimerManager}!AdjustTimeLimit@{AdjustTimeLimit}}
+\index{AdjustTimeLimit@{AdjustTimeLimit}!TimerManager@{TimerManager}}
+\doxysubsubsection{\texorpdfstring{AdjustTimeLimit()}{AdjustTimeLimit()}}
+{\footnotesize\ttfamily \label{class_timer_manager_ad539c1fecaaf4f57315ef91ca2c0703d} 
+void Timer\+Manager.\+Adjust\+Time\+Limit (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Adjusts the time limit based on the maze size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the maze.\\
+\hline
+{\em height} & Height of the maze.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_timer_manager_a65b440ed256722bab192b2cf3751d92c}\index{TimerManager@{TimerManager}!CountdownTimer@{CountdownTimer}}
+\index{CountdownTimer@{CountdownTimer}!TimerManager@{TimerManager}}
+\doxysubsubsection{\texorpdfstring{CountdownTimer()}{CountdownTimer()}}
+{\footnotesize\ttfamily \label{class_timer_manager_a65b440ed256722bab192b2cf3751d92c} 
+IEnumerator Timer\+Manager.\+Countdown\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Coroutine for the countdown timer. 
+
+\begin{DoxyReturn}{Returns}
+IEnumerator for the coroutine.
+\end{DoxyReturn}
+\Hypertarget{class_timer_manager_a6bbee8f1347db785b2de8d386524ea57}\index{TimerManager@{TimerManager}!InitializeTimer@{InitializeTimer}}
+\index{InitializeTimer@{InitializeTimer}!TimerManager@{TimerManager}}
+\doxysubsubsection{\texorpdfstring{InitializeTimer()}{InitializeTimer()}}
+{\footnotesize\ttfamily \label{class_timer_manager_a6bbee8f1347db785b2de8d386524ea57} 
+void Timer\+Manager.\+Initialize\+Timer (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the timer based on the maze dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the maze.\\
+\hline
+{\em height} & Height of the maze.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Managers/Timer\+Manager.\+cs\end{DoxyCompactItemize}

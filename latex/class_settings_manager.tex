@@ -1,0 +1,85 @@
+\doxysection{Settings\+Manager Class Reference}
+\hypertarget{class_settings_manager}{}\label{class_settings_manager}\index{SettingsManager@{SettingsManager}}
+
+
+Manages game settings including maze algorithm selection, dimensions, and time limit options.  
+
+
+Inheritance diagram for Settings\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_settings_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_manager_a52e97c398a1f305e09930e007368c860}\label{class_settings_manager_a52e97c398a1f305e09930e007368c860} 
+enum \mbox{\hyperlink{class_settings_manager_a52e97c398a1f305e09930e007368c860}{Maze\+Algorithm}} \{ {\bfseries Prim}
+, {\bfseries DFS}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing the available maze algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_manager_a2b1085645b2a3b4397966a1838678c0b}\label{class_settings_manager_a2b1085645b2a3b4397966a1838678c0b} 
+void {\bfseries Switch\+Has\+Time\+Limit\+Setting} ()
+\begin{DoxyCompactList}\small\item\em Toggles the time limit setting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_manager_afaadfff9ae74c77b03947bee82d514c8}{Change\+Algorithm}} (int direction)
+\begin{DoxyCompactList}\small\item\em Changes the selected maze algorithm with wrapping based on the provided direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_manager_ab8d490614a429bb1cc0cf87bb971b8cb}\label{class_settings_manager_ab8d490614a429bb1cc0cf87bb971b8cb} 
+\mbox{\hyperlink{class_settings_manager_a52e97c398a1f305e09930e007368c860}{Maze\+Algorithm}} {\bfseries Selected\+Maze\+Algorithm} = Maze\+Algorithm.\+Prim
+\begin{DoxyCompactList}\small\item\em The selected maze algorithm. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_manager_a3b511927b2ad2aab4981ae274a011621}\label{class_settings_manager_a3b511927b2ad2aab4981ae274a011621} 
+Action {\bfseries Algorithm\+Changed}
+\begin{DoxyCompactList}\small\item\em Event triggered when the maze algorithm is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_manager_ad87c0c3a12248a329b99dc46e1e36cd9}\label{class_settings_manager_ad87c0c3a12248a329b99dc46e1e36cd9} 
+static \mbox{\hyperlink{class_settings_manager}{Settings\+Manager}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the \doxylink{class_settings_manager}{Settings\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_manager_acb78c645e283297e26c38d19a4bbee3e}\label{class_settings_manager_acb78c645e283297e26c38d19a4bbee3e} 
+int {\bfseries Width} = 10\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Width of the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_manager_ab2dd429e8ff8b3c780911dce408aa3d6}\label{class_settings_manager_ab2dd429e8ff8b3c780911dce408aa3d6} 
+int {\bfseries Height} = 10\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Height of the maze. \end{DoxyCompactList}\item 
+\Hypertarget{class_settings_manager_a365a65bb60afaefe1c2f8aa9ea432461}\label{class_settings_manager_a365a65bb60afaefe1c2f8aa9ea432461} 
+bool {\bfseries Has\+Time\+Limit} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the maze has a time limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_settings_manager_a37d3f3368bbd54fbad960cf531b59eaf}\label{class_settings_manager_a37d3f3368bbd54fbad960cf531b59eaf} 
+void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Initializes the singleton instance and prevents it from being destroyed on scene load. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages game settings including maze algorithm selection, dimensions, and time limit options. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_settings_manager_afaadfff9ae74c77b03947bee82d514c8}\index{SettingsManager@{SettingsManager}!ChangeAlgorithm@{ChangeAlgorithm}}
+\index{ChangeAlgorithm@{ChangeAlgorithm}!SettingsManager@{SettingsManager}}
+\doxysubsubsection{\texorpdfstring{ChangeAlgorithm()}{ChangeAlgorithm()}}
+{\footnotesize\ttfamily \label{class_settings_manager_afaadfff9ae74c77b03947bee82d514c8} 
+void Settings\+Manager.\+Change\+Algorithm (\begin{DoxyParamCaption}\item[{int}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the selected maze algorithm with wrapping based on the provided direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction to change the algorithm (-\/1 for previous, 1 for next).\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Managers/Settings\+Manager.\+cs\end{DoxyCompactItemize}

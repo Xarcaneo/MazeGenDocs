@@ -1,0 +1,79 @@
+\doxysection{Button\+Focus\+Handler Class Reference}
+\hypertarget{class_button_focus_handler}{}\label{class_button_focus_handler}\index{ButtonFocusHandler@{ButtonFocusHandler}}
+
+
+Handles the visual focus state of a button by changing its sprite when the pointer enters and exits the button area.  
+
+
+Inheritance diagram for Button\+Focus\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_button_focus_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_focus_handler_a97788828907fde799530afad850eb954}{On\+Pointer\+Enter}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em Changes the button sprite to the focused sprite when the pointer enters the button area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_focus_handler_a05c5791d4f10f092f60b42896e59693b}{On\+Pointer\+Exit}} (Pointer\+Event\+Data event\+Data)
+\begin{DoxyCompactList}\small\item\em Reverts the button sprite to the default sprite when the pointer exits the button area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_button_focus_handler_a3f32f6d30b022f0d3f04917a1b69cbdf}\label{class_button_focus_handler_a3f32f6d30b022f0d3f04917a1b69cbdf} 
+void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Initializes the button image component and sets the default sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_button_focus_handler_a33bfd730b92d8c7142b8ad00a653c86c}\label{class_button_focus_handler_a33bfd730b92d8c7142b8ad00a653c86c} 
+Sprite {\bfseries default\+Sprite}
+\begin{DoxyCompactList}\small\item\em The default sprite for the button. \end{DoxyCompactList}\item 
+\Hypertarget{class_button_focus_handler_a530dbf07586843eb6a30cb5cefd36c2e}\label{class_button_focus_handler_a530dbf07586843eb6a30cb5cefd36c2e} 
+Sprite {\bfseries focused\+Sprite}
+\begin{DoxyCompactList}\small\item\em The sprite for the button when it is focused. \end{DoxyCompactList}\item 
+\Hypertarget{class_button_focus_handler_a335544033edcebf95d66f2ee8737d70c}\label{class_button_focus_handler_a335544033edcebf95d66f2ee8737d70c} 
+Image {\bfseries button\+Image}
+\begin{DoxyCompactList}\small\item\em The Image component of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the visual focus state of a button by changing its sprite when the pointer enters and exits the button area. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_button_focus_handler_a97788828907fde799530afad850eb954}\index{ButtonFocusHandler@{ButtonFocusHandler}!OnPointerEnter@{OnPointerEnter}}
+\index{OnPointerEnter@{OnPointerEnter}!ButtonFocusHandler@{ButtonFocusHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerEnter()}{OnPointerEnter()}}
+{\footnotesize\ttfamily \label{class_button_focus_handler_a97788828907fde799530afad850eb954} 
+void Button\+Focus\+Handler.\+On\+Pointer\+Enter (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Changes the button sprite to the focused sprite when the pointer enters the button area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current event data.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_button_focus_handler_a05c5791d4f10f092f60b42896e59693b}\index{ButtonFocusHandler@{ButtonFocusHandler}!OnPointerExit@{OnPointerExit}}
+\index{OnPointerExit@{OnPointerExit}!ButtonFocusHandler@{ButtonFocusHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerExit()}{OnPointerExit()}}
+{\footnotesize\ttfamily \label{class_button_focus_handler_a05c5791d4f10f092f60b42896e59693b} 
+void Button\+Focus\+Handler.\+On\+Pointer\+Exit (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverts the button sprite to the default sprite when the pointer exits the button area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current event data.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+UI/Button\+Focus\+Handler.\+cs\end{DoxyCompactItemize}

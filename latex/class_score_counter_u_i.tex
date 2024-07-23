@@ -1,0 +1,63 @@
+\doxysection{Score\+Counter\+UI Class Reference}
+\hypertarget{class_score_counter_u_i}{}\label{class_score_counter_u_i}\index{ScoreCounterUI@{ScoreCounterUI}}
+
+
+Manages the UI for displaying the score using carrot icons.  
+
+
+Inheritance diagram for Score\+Counter\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_score_counter_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_score_counter_u_i_adf672a55f89847ec1ad48232d22a5867}\label{class_score_counter_u_i_adf672a55f89847ec1ad48232d22a5867} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_score_counter_u_i}{Score\+Counter\+UI} and subscribes to events. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a82334eb85f8967c672e688c0f8e15f0b}\label{class_score_counter_u_i_a82334eb85f8967c672e688c0f8e15f0b} 
+void {\bfseries Initialize\+Carrot\+Icons} ()
+\begin{DoxyCompactList}\small\item\em Initializes the carrot icons based on the maximum score to win. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_aa2d97e11bb49072f02ba0c8b8efe1ccc}\label{class_score_counter_u_i_aa2d97e11bb49072f02ba0c8b8efe1ccc} 
+void {\bfseries Clear\+Carrot\+Icons} ()
+\begin{DoxyCompactList}\small\item\em Clears the current carrot icons from the UI. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a993d15ad848ea454cdbe4655c793b8fc}\label{class_score_counter_u_i_a993d15ad848ea454cdbe4655c793b8fc} 
+void {\bfseries On\+Score\+Increased} ()
+\begin{DoxyCompactList}\small\item\em Handles the score increased event by updating the carrot icons. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_af4e55c48d1613baa4e6baa49e1b4c4be}\label{class_score_counter_u_i_af4e55c48d1613baa4e6baa49e1b4c4be} 
+void {\bfseries On\+Score\+Reseted} ()
+\begin{DoxyCompactList}\small\item\em Handles the score reset event by resetting the carrot icons and animations. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a21268a59c840dfdc6f511b66e467aa75}\label{class_score_counter_u_i_a21268a59c840dfdc6f511b66e467aa75} 
+void {\bfseries On\+Time\+Almost\+Up} ()
+\begin{DoxyCompactList}\small\item\em Handles the time almost up event by playing the "{}\+Hurry"{} animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a0ff3d9ec010615cea5e3a9345269a0b4}\label{class_score_counter_u_i_a0ff3d9ec010615cea5e3a9345269a0b4} 
+void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from events when the \doxylink{class_score_counter_u_i}{Score\+Counter\+UI} is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_score_counter_u_i_a911fe44358640b338976c8415391b33e}\label{class_score_counter_u_i_a911fe44358640b338976c8415391b33e} 
+Game\+Object {\bfseries carrot\+Icon\+Prefab}
+\begin{DoxyCompactList}\small\item\em Prefab for the carrot icon. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a7dac514baf013277827e74ffcafc7cbf}\label{class_score_counter_u_i_a7dac514baf013277827e74ffcafc7cbf} 
+Sprite {\bfseries collected\+Carrot\+Sprite}
+\begin{DoxyCompactList}\small\item\em Sprite for the collected carrot icon. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a88a27373431d412b1c09bb44be53dc66}\label{class_score_counter_u_i_a88a27373431d412b1c09bb44be53dc66} 
+\mbox{\hyperlink{class_timer_manager}{Timer\+Manager}} {\bfseries timer\+Manager}
+\begin{DoxyCompactList}\small\item\em Reference to the \doxylink{class_timer_manager}{Timer\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a2acfc3c9f07a8f58e7082b06cf0ca0dd}\label{class_score_counter_u_i_a2acfc3c9f07a8f58e7082b06cf0ca0dd} 
+List$<$ Image $>$ {\bfseries carrot\+Icons} = new List$<$Image$>$()
+\begin{DoxyCompactList}\small\item\em List to hold the carrot icon images. \end{DoxyCompactList}\item 
+\Hypertarget{class_score_counter_u_i_a8eef8f8728b2fb0aceb45cf32c9cb985}\label{class_score_counter_u_i_a8eef8f8728b2fb0aceb45cf32c9cb985} 
+Animator {\bfseries m\+\_\+animator}
+\begin{DoxyCompactList}\small\item\em Reference to the Animator component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the UI for displaying the score using carrot icons. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+UI/Score\+Counter\+UI.\+cs\end{DoxyCompactItemize}

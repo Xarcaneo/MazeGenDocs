@@ -1,0 +1,102 @@
+\doxysection{Level\+Manager Class Reference}
+\hypertarget{class_level_manager}{}\label{class_level_manager}\index{LevelManager@{LevelManager}}
+
+
+Manages the level progression, score tracking, and related events in the game.  
+
+
+Inheritance diagram for Level\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_ab55de8c17d3f71529c1776f8389ecc12}\label{class_level_manager_ab55de8c17d3f71529c1776f8389ecc12} 
+void {\bfseries Increase\+Score} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s score and checks if the level is completed. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_manager_a06cea9049955ad079ec2e3dd7420d0e7}\label{class_level_manager_a06cea9049955ad079ec2e3dd7420d0e7} 
+void {\bfseries Reset\+Level\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Resets the level-\/specific variables such as the score. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_manager_ad23083bf512e3a0a5137159b81c1f7e1}{Get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current score of the player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_manager_a000df9c2da2a054735bfef9c1ccc9c97}{Get\+Current\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current level of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_ae0588073c8dc7db0b9d18ad02b275a98}\label{class_level_manager_ae0588073c8dc7db0b9d18ad02b275a98} 
+int {\bfseries max\+Score\+To\+Win}
+\begin{DoxyCompactList}\small\item\em Maximum score required to complete the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_a4e58c52b52fc7486c8f6ede86867be7b}\label{class_level_manager_a4e58c52b52fc7486c8f6ede86867be7b} 
+static \mbox{\hyperlink{class_level_manager}{Level\+Manager}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the \doxylink{class_level_manager}{Level\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_a2a6eb8576f34a7d692409147607f3c19}\label{class_level_manager_a2a6eb8576f34a7d692409147607f3c19} 
+Action {\bfseries Score\+Increased}
+\begin{DoxyCompactList}\small\item\em Event triggered when the score is increased. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_manager_a919b67454c02db18605ca29cc40d6aea}\label{class_level_manager_a919b67454c02db18605ca29cc40d6aea} 
+Action {\bfseries Score\+Reseted}
+\begin{DoxyCompactList}\small\item\em Event triggered when the score is reset. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_manager_a1b883c393df4a53cab5d9fe20f2d3ffc}\label{class_level_manager_a1b883c393df4a53cab5d9fe20f2d3ffc} 
+Action {\bfseries New\+Level}
+\begin{DoxyCompactList}\small\item\em Event triggered when a new level is started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_a34758a17d38f61b86163674657c94256}\label{class_level_manager_a34758a17d38f61b86163674657c94256} 
+void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Initializes the singleton instance and prevents it from being destroyed on scene load. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_manager_a39717d560c930cf8bcf40f27607149bf}\label{class_level_manager_a39717d560c930cf8bcf40f27607149bf} 
+int {\bfseries m\+\_\+current\+\_\+level} = 1
+\begin{DoxyCompactList}\small\item\em Current level of the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_manager_a14a611d1bd9d5ec917b5e69df0dd1e10}\label{class_level_manager_a14a611d1bd9d5ec917b5e69df0dd1e10} 
+int {\bfseries m\+\_\+current\+\_\+score} = 0
+\begin{DoxyCompactList}\small\item\em Current score of the player in the current level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the level progression, score tracking, and related events in the game. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_manager_a000df9c2da2a054735bfef9c1ccc9c97}\index{LevelManager@{LevelManager}!GetCurrentLevel@{GetCurrentLevel}}
+\index{GetCurrentLevel@{GetCurrentLevel}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{GetCurrentLevel()}{GetCurrentLevel()}}
+{\footnotesize\ttfamily \label{class_level_manager_a000df9c2da2a054735bfef9c1ccc9c97} 
+int Level\+Manager.\+Get\+Current\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current level of the game. 
+
+\begin{DoxyReturn}{Returns}
+The current level.
+\end{DoxyReturn}
+\Hypertarget{class_level_manager_ad23083bf512e3a0a5137159b81c1f7e1}\index{LevelManager@{LevelManager}!GetScore@{GetScore}}
+\index{GetScore@{GetScore}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{GetScore()}{GetScore()}}
+{\footnotesize\ttfamily \label{class_level_manager_ad23083bf512e3a0a5137159b81c1f7e1} 
+int Level\+Manager.\+Get\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current score of the player. 
+
+\begin{DoxyReturn}{Returns}
+The current score.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gebruiker/\+Documents/\+Git\+Hub/\+Maze\+Generation\+Project/\+Assets/\+Scripts/\+Managers/Level\+Manager.\+cs\end{DoxyCompactItemize}
